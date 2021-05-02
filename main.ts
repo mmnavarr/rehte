@@ -1,10 +1,15 @@
 import { BigNumber, ethers } from "ethers";
+import * as dotenv from "dotenv";
+dotenv.config({ path: __dirname+ '/.env' });
 
-const INFURA_PROVIDER_URL = "https://mainnet.infura.io/v3/1bad90b90d4c4564aa8655b8e16017d0";
-const LIQUIDITY_POOL_ADDRESS = "0x8B7D79a679c10bEd518fE905D764b4b7667f24de";
+const INFURA_PROVIDER_URL = process.env.INFURA_PROVIDER_URL ?? "ENV_ERROR";
+const LIQUIDITY_POOL_ADDRESS = process.env.LIQUIDITY_POOL_ADDRESS ?? "ENV_ERROR";
 
 const main = () => {
   console.log("Starting bot")
+
+  // Examples
+  examples();
 
   // Connect to wallet
   // connectToWallet();
