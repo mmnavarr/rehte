@@ -23,12 +23,8 @@
     "strictFunctionTypes": false,
     "pretty": true,
     "removeComments": true,
-    "noEmit": true,
     "skipLibCheck": true,
   },
-  "include": [
-    "src/*",
-  ],
   "exclude": [
     "node_modules",
     "dist",
